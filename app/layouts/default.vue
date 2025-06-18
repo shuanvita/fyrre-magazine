@@ -1,11 +1,13 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div class="bg-slate-200">
-    <header>Header</header>
+  <div>
+    <TheHeader />
     <main>
       <NuxtPage />
     </main>
     <footer>Footer</footer>
   </div>
 </template>
+
+<script setup lang="ts">
+import { TheHeader } from '~/components/index.ts'
+</script>
