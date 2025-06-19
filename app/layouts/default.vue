@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="xl:pt-16">
     <TheHeader />
     <main>
       <NuxtPage />
     </main>
-    <footer>Footer</footer>
+    <footer></footer>
   </div>
 </template>
 
