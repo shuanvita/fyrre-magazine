@@ -1,5 +1,5 @@
 <template>
-  <div class="xl:pt-16">
+  <div class="pt-[40px] lg:pt-[62px]">
     <TheHeader />
     <main>
       <NuxtPage />
@@ -9,5 +9,5 @@
 </template>
 
 <script setup lang="ts">
-import { TheHeader } from '~/components/index.ts'
+import TheHeader from '~/components/TheHeader.vue'
 </script>
