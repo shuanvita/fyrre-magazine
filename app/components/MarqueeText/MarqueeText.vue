@@ -1,14 +1,16 @@
 <script setup lang="ts">
 const props = defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
   duration: {
     type: Number,
     default: 15,
-    validator: (value: number) => value > 0,
   },
   repeat: {
     type: Number,
     default: 2,
-    validator: (value: number) => value > 0,
   },
   paused: {
     type: Boolean,
@@ -19,43 +21,41 @@ const props = defineProps({
     default: false,
   },
 })
-
-// const animationDuration = computed(() => props.duration)
 </script>
 
 <template>
-  <div class="bg-black p-5 text-[20px] text-white marquee-wrapper text-nowrap">
-    <div
-      class="marquee"
-      :style="{ animationDuration: props.duration + 's' }"
-      :class="{ reverse: props.reverse, paused: props.paused }"
-    >
-      <slot></slot>
-      <!-- Дублируем контент для плавной прокрутки -->
-      <slot></slot>
+  <div
+    :class="[
+      'bg-black py-5 text-[20px] text-white overflow-hidden relative text-nowrap',
+      { 'grid grid-cols-[auto_1fr] gap-6 pl-5': props.title },
+    ]"
+  >
+    <div v-if="title" class="text-[22px] font-semibold uppercase relative z-10">{{ props.title }}</div>
+    <div class="overflow-hidden">
+      <div
+        class="flex items-center overflow-hidden marquee relative z-0"
+        :style="{ animationDuration: props.duration + 's' }"
+        :class="{ reverse: props.reverse, paused: props.paused }"
+      >
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.marquee-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
 .marquee {
-  display: flex;
-  align-items: center;
   animation: marquee 15s linear infinite;
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
 
   /* Для коротких текстов дублируем контент */
-  @for $i from 1 to props.repeat {
+  /* @for $i from 1 to props.repeat {
     &::after {
       content: attr(data-content);
     }
-  }
+  } */
 }
 
 @keyframes marquee {
