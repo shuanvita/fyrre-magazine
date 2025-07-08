@@ -2,10 +2,16 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  srcDir: 'app/',
+  alias: {
+    '@': '../src',
+  },
+  dir: {
+    pages: './src/app/routes',
+    layouts: './src/app/layouts',
+  },
   future: {
     compatibilityVersion: 4,
   },
-  css: ['./app/assets/fonts/fonts.css', './app/assets/css/global.css'],
+  css: ['../src/app/styles/global.css'],
   modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss'],
 })
