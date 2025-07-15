@@ -12,6 +12,6 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  css: ['../src/app/styles/global.css'],
+  css: ['../src/app/fonts/fonts.css', '../src/app/styles/global.css'],
   modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss'],
 })
