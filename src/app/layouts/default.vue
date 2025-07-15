@@ -1,11 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { TheHeader } from '@/widgets/header/index'
+</script>
 
 <template>
-  <div class="bg-slate-200">
-    <header>Header</header>
-    <main>
+  <div class="pt-[40px] lg:pt-[62px]">
+    <TheHeader />
+    <main class="container">
       <NuxtPage />
     </main>
-    <footer>Footer</footer>
   </div>
 </template>

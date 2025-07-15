@@ -1,3 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>Home</template>
+<template>
+  <div class="mt-12">Main</div>
+</template>

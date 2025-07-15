@@ -1,1 +1,12 @@
+@import '../fonts/fonts';
 @import 'tailwindcss';
+
+@layer base {
+  :root {
+    --default-font-family: 'General Sans', 'sans-serif';
+  }
+}
+
+.container {
+  @apply max-w-[1552px] mx-auto px-5 sm:px-4;
+}
