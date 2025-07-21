@@ -1,5 +1,5 @@
 export const globalData = {
-  logo: '/svg/filled/logo.svg',
+  logo: '/svg/logo.svg',
   header: {
     navigation: [
       {
@@ -13,6 +13,12 @@ export const globalData = {
       {
         text: 'Podcast',
         href: '/podcast',
+      },
+    ],
+    social: [
+      {
+        icon: '',
+        href: '',
       },
     ],
   },
