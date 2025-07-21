@@ -17,8 +17,20 @@ export const globalData = {
     ],
     social: [
       {
-        icon: '',
-        href: '',
+        icon: 'instagram',
+        href: '#',
+      },
+      {
+        icon: 'twitter',
+        href: '#',
+      },
+      {
+        icon: 'youtube',
+        href: '#',
+      },
+      {
+        icon: 'rss',
+        href: '#',
       },
     ],
   },
