@@ -9,6 +9,7 @@ import { AppMarquee } from '@/entities/AppMarquee/index';
       title="News Ticker+++"
       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit +++"
       :gap="24"
+      reverse
     />
   </div>
 </template>

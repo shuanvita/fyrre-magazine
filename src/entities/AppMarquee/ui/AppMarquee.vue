@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { IAppMarquee } from '../model/AppMarquee.type';
-import { ref, onMounted, computed } from 'vue';
 
 const props = withDefaults(defineProps<IAppMarquee>(), {
   title: '',
@@ -8,7 +7,7 @@ const props = withDefaults(defineProps<IAppMarquee>(), {
   repeat: 2,
   paused: false,
   reverse: false,
-  gap: 24, // Добавляем новый пропс для отступа
+  gap: 24,
 });
 
 const marqueeWrapper = ref<HTMLElement | null>(null);
@@ -26,7 +25,7 @@ const repeatedText = computed(() => {
   // Обертываем текст в div с отступами
   const wrappedText = Array(repeatCount)
     .fill(props.text)
-    .map((text) => `<div class="text-block px-6">${text}</div>`);
+    .map((text) => `<div class="px-6">${text}</div>`);
 
   return wrappedText.join('');
 });
