@@ -11,6 +11,6 @@ const props = withDefaults(defineProps<ILogo>(), {
 
 <template>
   <NuxtLink :to="props.href">
-    <UiSvg :name="props.name" :width="props.width" :height="props.height" />
+    <ui-svg :name="props.name" :width="props.width" :height="props.height" />
   </NuxtLink>
 </template>

@@ -26,7 +26,7 @@ import { TheLogo } from '@/entities/logo/index';
           class="hover:text-blue-700"
           :to="item.href"
         >
-          <UiSvg :name="item.icon" size="20" />
+          <ui-svg :name="item.icon" size="20" />
         </NuxtLink>
       </div>
     </div>

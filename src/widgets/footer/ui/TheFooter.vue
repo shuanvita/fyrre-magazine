@@ -3,5 +3,9 @@ import { TheLogo } from '@/entities/logo/index';
 </script>
 
 <template>
-  <TheLogo />
+  <footer class="bg-black lg:mt-[192px]">
+    <div class="container">
+      <TheLogo class="text-white" />
+    </div>
+  </footer>
 </template>
