@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { globalData } from '@/shared/data/index';
-import { TheLogo } from '@/entities/logo/index';
+import { TheLogo } from '@/entities/TheLogo/index';
 </script>
 
 <template>
