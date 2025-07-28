@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { TheHeader } from '@/widgets/header/index'
+import { TheHeader } from '@/widgets/header/index';
+import { TheFooter } from '@/widgets/footer/index';
 </script>
 
 <template>
@@ -8,5 +9,6 @@ import { TheHeader } from '@/widgets/header/index'
     <main class="container">
       <NuxtPage />
     </main>
+    <TheFooter />
   </div>
 </template>

@@ -1,5 +1,8 @@
 export const globalData = {
-  logo: '/svg/logo.svg',
+  logo: {
+    name: 'logo',
+    href: '/',
+  },
   header: {
     navigation: [
       {
@@ -34,4 +37,4 @@ export const globalData = {
       },
     ],
   },
-}
+};

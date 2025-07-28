@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { globalData } from '@/shared/data/index';
+import { TheLogo } from '@/entities/logo/index';
 </script>
 
 <template>
   <header
     class="container grid grid-cols-[auto_1fr] items-center pb-[15px] border-b-1 border-black"
   >
-    <NuxtLink class="hover:opacity-70" to="/">
-      <UiSvg name="logo" width="210" />
-    </NuxtLink>
+    <TheLogo class="hover:opacity-70" />
     <div class="flex gap-[25px] items-center justify-self-end">
       <nav>
         <ul class="flex items-center gap-[25px]">

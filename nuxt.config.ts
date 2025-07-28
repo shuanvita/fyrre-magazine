@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   alias: {
     '@': '../src',
+    '@entities': '../src/entities',
   },
   dir: {
     pages: './src/app/routes',
