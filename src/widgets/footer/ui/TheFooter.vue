@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { TheLogo } from '@/entities/TheLogo/index';
-import { AppMarquee } from '@/entities/AppMarquee/index';
+import { TheLogo } from '@/entities/TheLogo/index'
+import { AppMarquee } from '@/entities/AppMarquee/index'
+import { PostCategory } from '@/entities/PostCategory/index'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import { AppMarquee } from '@/entities/AppMarquee/index';
     <div class="container">
       <TheLogo class="text-white" />
       <AppMarquee />
+      <PostCategory label="All rights reserved" />
     </div>
   </footer>
 </template>

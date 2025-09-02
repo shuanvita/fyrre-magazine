@@ -1,23 +1,32 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { homeData } from '@/shared/data/index'
+import { PostCategory } from '@/entities/PostCategory/index'
+
+const { mainPost } = homeData
+</script>
 
 <template>
   <article class="grid grid-cols-2 gap-12">
-    <h2 class="text-[104px] font-semibold leading-[1.1] uppercase">Don’t close your eyes</h2>
+    <h2 class="text-[104px] font-semibold leading-[1.1] uppercase">{{ mainPost.title }}</h2>
     <div class="pt-[10px]">
       <p class="mb-15 text-[18px] leading-[1.8]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Egestas dui id ornare arcu odio ut sem. Cras ornare arcu dui vivamus arcu felis bibendum ut.
-        Porttitor leo a diam.
+        {{ mainPost.description }}
       </p>
       <div class="flex justify-between items-center">
         <div class="flex gap-6">
-          <div class="flex gap-2 text-[14px] leading-[1.6]"><span class="font-bold">Text</span>Jakob Gronberg</div>
-          <div class="flex gap-2 text-[14px] leading-[1.6]"><span class="font-bold">Date</span>16. March 2022</div>
-          <div class="flex gap-2 text-[14px] leading-[1.6]"><span class="font-bold">Duration</span>1 Min</div>
+          <div
+            v-for="(item, idx) in mainPost.additionalInfo"
+            :key="`additional-info-${idx}`"
+            class="flex gap-2 text-[14px] leading-[1.6]"
+          >
+            <span class="font-bold">{{ item.title }}</span
+            >{{ item.value }}
+          </div>
         </div>
-        <div class="px-3 py-2 text-[12px] uppercase border-1 rounded-full">Label</div>
+        <ui-ContentMeta />
+        <PostCategory :label="mainPost.category" />
       </div>
     </div>
-    <NuxtImg class="col-span-2" src="/images/mainPost.png" alt="Don’t close your eyes" loading="lazy" />
+    <NuxtImg class="col-span-2" :src="mainPost.image.src" :alt="mainPost.image.alt" loading="lazy" />
   </article>
 </template>
