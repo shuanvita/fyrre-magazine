@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   alias: {
     '@': '../src',
     '@entities': '../src/entities',
+    '@shared': '../src/shared',
   },
   dir: {
     pages: './src/app/routes',
@@ -23,5 +24,5 @@ export default defineNuxtConfig({
     ],
   },
   css: ['../src/app/fonts/fonts.css', '../src/app/styles/global.css'],
-  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss'],
-});
+  modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/image'],
+})
