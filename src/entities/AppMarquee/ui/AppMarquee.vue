@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IAppMarquee } from '../model/AppMarquee.type';
+import type { IAppMarquee } from '../model/AppMarquee.type'
 
 const props = withDefaults(defineProps<IAppMarquee>(), {
   title: '',
@@ -8,40 +8,40 @@ const props = withDefaults(defineProps<IAppMarquee>(), {
   paused: false,
   reverse: false,
   gap: 24,
-});
+})
 
-const marqueeWrapper = ref<HTMLElement | null>(null);
-const marqueeContent = ref<HTMLElement | null>(null);
+const marqueeWrapper = ref<HTMLElement | null>(null)
+const marqueeContent = ref<HTMLElement | null>(null)
 
 const repeatedText = computed(() => {
   if (!marqueeWrapper.value || !marqueeContent.value || !props.text) {
-    return '';
+    return ''
   }
 
-  const containerWidth = marqueeWrapper.value.offsetWidth;
-  const textWidth = marqueeContent.value.getBoundingClientRect().width;
-  const repeatCount = Math.max(2, Math.ceil((containerWidth * 10) / textWidth));
+  const containerWidth = marqueeWrapper.value.offsetWidth
+  const textWidth = marqueeContent.value.getBoundingClientRect().width
+  const repeatCount = Math.max(2, Math.ceil((containerWidth * 10) / textWidth))
 
   // Обертываем текст в div с отступами
   const wrappedText = Array(repeatCount)
     .fill(props.text)
-    .map((text) => `<div class="px-6">${text}</div>`);
+    .map((text) => `<div class="px-6">${text}</div>`)
 
-  return wrappedText.join('');
-});
+  return wrappedText.join('')
+})
 
 onMounted(() => {
   if (marqueeContent.value && props.text) {
-    marqueeContent.value.innerHTML = repeatedText.value;
+    marqueeContent.value.innerHTML = repeatedText.value
   }
-});
+})
 </script>
 
 <template>
   <div
     ref="marqueeWrapper"
     :class="[
-      'bg-black py-5 text-[20px] text-white overflow-hidden relative text-nowrap',
+      'bg-black py-[18px] text-[20px] text-white overflow-hidden relative text-nowrap h-[70px]',
       { 'grid grid-cols-[auto_1fr] gap-6 pl-5': props.title },
     ]"
   >
@@ -51,7 +51,7 @@ onMounted(() => {
     <div class="overflow-hidden">
       <div
         ref="marqueeContent"
-        class="flex items-center overflow-hidden marquee relative z-0"
+        class="flex items-center overflow-hidden marquee relative z-0 pt-[3px]"
         :style="{ animationDuration: props.duration + 's' }"
         :class="{ reverse: props.reverse, paused: props.paused }"
       >

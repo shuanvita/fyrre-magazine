@@ -7,11 +7,9 @@ const { mainPost } = homeData
 
 <template>
   <article class="grid grid-cols-2 gap-12">
-    <h2 class="text-[104px] font-semibold leading-[1.1] uppercase">{{ mainPost.title }}</h2>
+    <BaseHeading :title="mainPost.title" is-uppercase />
     <div class="pt-[10px]">
-      <p class="mb-15 text-[18px] leading-[1.8]">
-        {{ mainPost.description }}
-      </p>
+      <BaseText class="mb-[63px]" size="large" :text="mainPost.description" />
       <div class="flex justify-between items-center">
         <div class="flex gap-6">
           <div v-for="(item, idx) in mainPost.additionalInfo" :key="`post-metadata-${idx}`">
