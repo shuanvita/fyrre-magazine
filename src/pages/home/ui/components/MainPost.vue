@@ -14,16 +14,10 @@ const { mainPost } = homeData
       </p>
       <div class="flex justify-between items-center">
         <div class="flex gap-6">
-          <div
-            v-for="(item, idx) in mainPost.additionalInfo"
-            :key="`additional-info-${idx}`"
-            class="flex gap-2 text-[14px] leading-[1.6]"
-          >
-            <span class="font-bold">{{ item.title }}</span
-            >{{ item.value }}
+          <div v-for="(item, idx) in mainPost.additionalInfo" :key="`post-metadata-${idx}`">
+            <ui-PostMetadata :title="item.title" :value="item.value" />
           </div>
         </div>
-        <ui-ContentMeta />
         <PostCategory :label="mainPost.category" />
       </div>
     </div>
