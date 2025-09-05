@@ -19,7 +19,6 @@ export default defineNuxtConfig({
       {
         path: 'src/shared/ui',
         pattern: '**/*',
-        prefix: 'ui',
       },
     ],
   },

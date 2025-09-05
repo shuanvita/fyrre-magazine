@@ -5,7 +5,7 @@ import MainPost from './components/MainPost.vue'
 
 <template>
   <div class="mt-12">
-    <ui-svg class="mb-12" name="home-title" width="1520" height="216" />
+    <BaseSvg class="mb-12" name="home-title" width="1520" height="216" />
     <AppMarquee
       class="mb-18"
       title="News Ticker+++"

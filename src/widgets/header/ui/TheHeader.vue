@@ -1,20 +1,16 @@
 <script setup lang="ts">
-import { globalData } from '@/shared/data/index';
-import { TheLogo } from '@/entities/TheLogo/index';
+import { globalData } from '@/shared/data/index'
+import { TheLogo } from '@/entities/TheLogo/index'
 </script>
 
 <template>
-  <header
-    class="container grid grid-cols-[auto_1fr] items-center pb-[15px] border-b-1 border-black"
-  >
+  <header class="container grid grid-cols-[auto_1fr] items-center pb-[15px] border-b-1 border-black">
     <TheLogo class="hover:opacity-70" />
     <div class="flex gap-[25px] items-center justify-self-end">
       <nav>
         <ul class="flex items-center gap-[25px]">
           <li v-for="(item, idx) in globalData.header.navigation" :key="`nav-item-${idx}`">
-            <NuxtLink class="text-[20px] hover:text-blue-700" :to="item.href">{{
-              item.text
-            }}</NuxtLink>
+            <NuxtLink class="text-[20px] hover:text-blue-700" :to="item.href">{{ item.text }}</NuxtLink>
           </li>
         </ul>
       </nav>
@@ -26,7 +22,7 @@ import { TheLogo } from '@/entities/TheLogo/index';
           class="hover:text-blue-700"
           :to="item.href"
         >
-          <ui-svg :name="item.icon" size="20" />
+          <BaseSvg :name="item.icon" size="20" />
         </NuxtLink>
       </div>
     </div>
