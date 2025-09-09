@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { AppMarquee } from '@/entities/AppMarquee/index'
 import MainPost from './components/MainPost.vue'
+import { BlogList } from '@/widgets/blogList/index'
+import { AsidePanel } from '@/widgets/asidePanel/index'
 </script>
 
 <template>
@@ -13,6 +15,10 @@ import MainPost from './components/MainPost.vue'
       :gap="24"
       reverse
     />
-    <MainPost />
+    <MainPost class="mb-15" />
+    <div class="grid grid-cols-[1fr_369px] gap-24">
+      <BlogList />
+      <AsidePanel />
+    </div>
   </div>
 </template>

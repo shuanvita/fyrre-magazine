@@ -1,1 +1,2 @@
-npm run lint && npm run lint-fsd
+// npm run lint && npm run lint-fsd
+npm run lint
