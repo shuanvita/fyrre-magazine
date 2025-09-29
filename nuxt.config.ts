@@ -19,9 +19,10 @@ export default defineNuxtConfig({
       {
         path: 'src/shared/ui',
         pattern: '**/*',
+        prefix: 'ui',
       },
     ],
   },
   css: ['../src/app/fonts/fonts.css', '../src/app/styles/global.css'],
   modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@nuxt/image'],
-})
+});
