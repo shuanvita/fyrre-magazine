@@ -2,7 +2,7 @@
 import { AppMarquee } from '@/entities/AppMarquee/index'
 import MainPost from './components/MainPost.vue'
 import BlogList from '@/shared/custom/BlogList/BlogList.vue'
-import { AsidePanel } from '@/widgets/asidePanel/index'
+import AsidePanel from '@/shared/custom/AsidePanel/AsidePanel.vue'
 </script>
 
 <template>
