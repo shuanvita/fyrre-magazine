@@ -1,16 +1,26 @@
 <script setup lang="ts">
-import type { IProjectLogo } from '../index'
-
-const props = withDefaults(defineProps<IProjectLogo>(), {
-  name: 'logo',
-  href: '/',
-  width: '210',
-  height: '',
+const props = defineProps({
+  name: {
+    type: String,
+    default: 'logo',
+  },
+  href: {
+    type: String,
+    default: '/',
+  },
+  width: {
+    type: String,
+    default: '210',
+  },
+  height: {
+    type: String,
+    default: '',
+  },
 })
 </script>
 
 <template>
   <NuxtLink :to="props.href">
-    <BaseSvg :name="props.name" :width="props.width" :height="props.height" />
+    <ui-svg :name="props.name" :width="props.width" :height="props.height" />
   </NuxtLink>
 </template>

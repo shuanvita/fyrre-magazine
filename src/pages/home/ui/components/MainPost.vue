@@ -7,9 +7,9 @@ const { mainPost } = homeData
 
 <template>
   <article class="grid grid-cols-2 gap-12">
-    <BaseHeading :title="mainPost.title" is-uppercase />
+    <ui-heading :title="mainPost.title" is-uppercase />
     <div class="pt-[10px]">
-      <BaseText class="mb-[63px]" size="large" :text="mainPost.description" />
+      <ui-text class="mb-[63px]" size="large" :text="mainPost.description" />
       <div class="flex justify-between items-center">
         <div class="flex gap-6">
           <div v-for="(item, idx) in mainPost.additionalInfo" :key="`post-metadata-${idx}`">
