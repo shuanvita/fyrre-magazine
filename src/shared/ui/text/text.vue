@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IBaseText } from './BaseText.type'
+import type { IBaseText } from './text.type'
 
 const props = withDefaults(defineProps<IBaseText>(), {
   text: '',
@@ -20,5 +20,5 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <p :class="classes" class="">{{ props.text }}</p>
+  <p :class="classes"><slot /></p>
 </template>

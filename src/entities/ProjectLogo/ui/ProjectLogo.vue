@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { ILogo } from '../index'
+import type { IProjectLogo } from '../index'
 
-const props = withDefaults(defineProps<ILogo>(), {
+const props = withDefaults(defineProps<IProjectLogo>(), {
   name: 'logo',
   href: '/',
   width: '210',

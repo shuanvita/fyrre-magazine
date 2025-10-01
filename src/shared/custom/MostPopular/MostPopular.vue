@@ -8,7 +8,7 @@ const props = defineProps<IMostPopular>()
   <div>
     <div class="text-[16px] font-semibold uppercase mb-8">{{ props.title }}</div>
     <div class="grid gap-6">
-      <div class="pb-6 border-b-1" v-for="(item, idx) in props.list" :key="`most-popular-${idx}`">
+      <div v-for="(item, idx) in props.list" :key="`most-popular-${idx}`" class="pb-6 border-b-1">
         <div class="flex gap-16">
           <div class="text-[24px]/[1.2] font-semibold">{{ item.number }}</div>
           <div>

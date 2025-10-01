@@ -28,9 +28,9 @@ const emit = defineEmits(['click']);
     :to="props.href"
     @click="emit('click')"
   >
-    <ui-BaseSvg v-if="props.iconLeft" name="arrow-left" size="16" />
+    <ui-svg v-if="props.iconLeft" name="arrow-left" size="16" />
     <slot />
-    <ui-BaseSvg v-if="props.iconRight" name="arrow-right" size="16" />
+    <ui-svg v-if="props.iconRight" name="arrow-right" size="16" />
   </nuxt-link>
   <button
     v-else

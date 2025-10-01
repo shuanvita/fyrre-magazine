@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { TheHeader } from '@/widgets/header/index';
-import { TheFooter } from '@/widgets/footer/index';
+import { AppHeader } from '~/src/widgets/AppHeader/index'
+import { AppFooter } from '~/src/widgets/AppFooter/index'
 </script>
 
 <template>
   <div class="pt-[40px] lg:pt-[62px]">
-    <TheHeader />
+    <AppHeader />
     <main class="container">
       <NuxtPage />
     </main>
-    <TheFooter />
+    <AppFooter />
   </div>
 </template>

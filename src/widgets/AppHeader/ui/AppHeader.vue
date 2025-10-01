@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { globalData } from '@/shared/data/index'
-import { TheLogo } from '@/entities/TheLogo/index'
+import { ProjectLogo } from '@/entities/ProjectLogo/index'
 </script>
 
 <template>
   <header class="container grid grid-cols-[auto_1fr] items-center pb-[15px] border-b-1 border-black">
-    <TheLogo class="hover:opacity-70" />
+    <ProjectLogo class="hover:opacity-70" />
     <div class="flex gap-[25px] items-center justify-self-end">
       <nav>
         <ul class="flex items-center gap-[25px]">
@@ -22,7 +22,7 @@ import { TheLogo } from '@/entities/TheLogo/index'
           class="hover:text-blue-700"
           :to="item.href"
         >
-          <BaseSvg :name="item.icon" size="20" />
+          <ui-svg :name="item.icon" size="20" />
         </NuxtLink>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IBaseHeading } from './BaseHeading.type'
+import type { IBaseHeading } from './heading.type'
 
 const props = withDefaults(defineProps<IBaseHeading>(), {
   type: 'h2',

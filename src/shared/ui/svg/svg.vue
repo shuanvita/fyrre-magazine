@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IBaseSvg } from './BaseSvg.type'
+import type { IBaseSvg } from './svg.type'
 
 const props = withDefaults(defineProps<IBaseSvg>(), {
   name: '',

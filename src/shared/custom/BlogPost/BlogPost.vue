@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { IBlogPost } from '../index'
-import { PostCategory } from '@/entities/PostCategory/index'
+import type { IBlogPost } from './BlogPost.type'
+// import { PostCategory } from '@/entities/PostCategory/index'
 
 const props = defineProps<IBlogPost>()
 </script>
@@ -19,7 +19,7 @@ const props = defineProps<IBlogPost>()
             <PostMetadata :title="item.title" :value="item.value" />
           </div>
         </div>
-        <PostCategory :label="props.category" />
+        <!-- <PostCategory :label="props.category" /> -->
       </div>
     </div>
   </article>
