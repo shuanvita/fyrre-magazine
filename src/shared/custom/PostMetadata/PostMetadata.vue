@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import type { IPostMetaData } from './PostMetadata.type'
-
-const props = withDefaults(defineProps<IPostMetaData>(), {
-  title: '',
-  value: '',
+const props = defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
+  value: {
+    type: String,
+    default: '',
+  },
 })
 </script>
 

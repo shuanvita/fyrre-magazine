@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import type { IBaseText } from './text.type'
-
-const props = withDefaults(defineProps<IBaseText>(), {
-  text: '',
-  size: 'default',
-  customClass: '',
+const props = defineProps({
+  size: {
+    type: String,
+    default: 'default',
+  },
+  customClass: {
+    type: String,
+    default: '',
+  },
 })
 
 const sizes = {
@@ -15,7 +18,7 @@ const sizes = {
 }
 
 const classes = computed(() => {
-  return [sizes[props.size], props.customClass]
+  return [sizes[props.size as keyof typeof sizes], props.customClass]
 })
 </script>
 

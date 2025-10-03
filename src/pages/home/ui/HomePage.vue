@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { AppMarquee } from '@/entities/AppMarquee/index'
 import MainPost from './components/MainPost.vue'
-import BlogList from '@/shared/custom/BlogList/BlogList.vue'
+import { BlogList } from '@/widgets/BlogList/index'
 import AsidePanel from '@/shared/custom/AsidePanel/AsidePanel.vue'
 </script>
 
 <template>
   <div class="mt-12">
-    <BaseSvg class="mb-[47px]" name="home-title" width="1520" height="216" />
+    <ui-svg class="mb-[47px]" name="home-title" width="1520" height="216" />
     <AppMarquee
       class="mb-19"
       title="News Ticker+++"

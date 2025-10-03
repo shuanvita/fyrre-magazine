@@ -1,11 +1,21 @@
 <script setup lang="ts">
-import type { IBaseHeading } from './heading.type'
-
-const props = withDefaults(defineProps<IBaseHeading>(), {
-  type: 'h2',
-  title: '',
-  customClass: '',
-  isUppercase: false,
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'h2',
+  },
+  title: {
+    type: String,
+    default: '',
+  },
+  customClass: {
+    type: String,
+    default: '',
+  },
+  isUppercase: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const styles = {
@@ -14,7 +24,7 @@ const styles = {
 }
 
 const classes = computed(() => {
-  const baseClasses = [styles[props.type], props.customClass]
+  const baseClasses = [styles[props.type as keyof typeof styles], props.customClass]
 
   if (props.isUppercase) {
     baseClasses.push('uppercase')

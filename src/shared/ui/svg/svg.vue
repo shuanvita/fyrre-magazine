@@ -1,11 +1,21 @@
 <script setup lang="ts">
-import type { IBaseSvg } from './svg.type'
-
-const props = withDefaults(defineProps<IBaseSvg>(), {
-  name: '',
-  size: '24',
-  width: '',
-  height: '',
+const props = defineProps({
+  name: {
+    type: String,
+    default: '',
+  },
+  size: {
+    type: String,
+    default: '24',
+  },
+  width: {
+    type: String,
+    default: '',
+  },
+  height: {
+    type: String,
+    default: '',
+  },
 })
 
 const styles = computed(() => ({
