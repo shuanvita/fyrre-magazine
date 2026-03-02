@@ -18,23 +18,23 @@ export const commonData = {
         to: '/podcast',
       },
     ],
-    socials: [
-      {
-        icon: 'outline/instagram',
-        link: '/',
-      },
-      {
-        icon: 'filled/twitter',
-        link: '/',
-      },
-      {
-        icon: 'filled/youtube',
-        link: '/',
-      },
-      {
-        icon: 'filled/rss',
-        link: '/',
-      },
-    ],
   },
+  socials: [
+    {
+      icon: 'outline/instagram',
+      href: '/',
+    },
+    {
+      icon: 'filled/twitter',
+      href: '/',
+    },
+    {
+      icon: 'filled/youtube',
+      href: '/',
+    },
+    {
+      icon: 'filled/rss',
+      href: '/',
+    },
+  ],
 }

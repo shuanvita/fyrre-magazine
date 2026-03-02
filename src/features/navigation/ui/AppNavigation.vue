@@ -6,12 +6,9 @@ const props = defineProps<NavigationList>()
 
 <template>
   <nav>
-    <ul>
+    <ul class="flex gap-3">
       <li v-for="(item, index) in props.navList" :key="`navigation-item-${index}`">
-        <RouterLink
-          :to="item.to"
-          class="inline-flex cursor-pointer items-center gap-1.5 duration-200"
-        >
+        <RouterLink :to="item.to">
           {{ item.text }}
         </RouterLink>
       </li>
