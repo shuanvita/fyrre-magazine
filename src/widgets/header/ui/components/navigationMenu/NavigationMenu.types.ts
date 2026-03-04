@@ -3,6 +3,6 @@ export interface NavigationList {
 }
 
 export interface NavigationItem {
-  text: string;
-  to: string;
+  text: string
+  to: string
 }

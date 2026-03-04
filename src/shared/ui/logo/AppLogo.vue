@@ -1,17 +1,9 @@
 <script setup lang="ts">
-import { VSvg } from 'shuanvita-ui-kit'
-
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  width: {
-    type: Number,
-  },
-})
+import { VSvg, VLink } from 'shuanvita-ui-kit'
 </script>
 
 <template>
-  <VSvg :name="props.name" :width="props.width" />
+  <VLink to="/">
+    <VSvg name="logo" :width="210" :height="18" />
+  </VLink>
 </template>

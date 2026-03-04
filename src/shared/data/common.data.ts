@@ -1,9 +1,5 @@
 export const commonData = {
   header: {
-    logo: {
-      name: 'logo',
-      width: 209,
-    },
     navigation: [
       {
         text: 'Magazine',
