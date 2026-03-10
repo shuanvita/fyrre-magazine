@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { VLink, VSvg } from 'shuanvita-ui-kit'
 import type { SocialLinkList } from '@/shared/ui/socialLinks/SocialLinks.types.ts'
+import { VLink } from '@/shared/ui/vLink/index'
+import { VSvg } from '@/shared/ui/vSvg/index'
 
 const props = defineProps<SocialLinkList>()
 </script>

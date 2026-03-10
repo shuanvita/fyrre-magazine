@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { VLink } from 'shuanvita-ui-kit'
 import type { NavigationList } from '@/widgets/header/ui/components/navigationMenu/NavigationMenu.types'
+import VLink from '@/shared/ui/vLink/VLink.vue'
 
 const props = defineProps<NavigationList>()
 </script>
