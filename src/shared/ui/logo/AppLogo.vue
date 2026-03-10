@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { VSvg, VLink } from 'shuanvita-ui-kit'
+import { VLink } from '@/shared/ui/vLink/index'
+import { VSvg } from '@/shared/ui/vSvg/index'
 </script>
 
 <template>
   <VLink to="/">
-    <VSvg name="logo" :width="210" :height="18" />
+    <VSvg class="max-w-52.5" name="logo" />
   </VLink>
 </template>
